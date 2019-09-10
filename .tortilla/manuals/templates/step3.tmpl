@@ -1,18 +1,18 @@
-Currently we have a running app with a single screen which looks stylish and presents some data to the user. 
+Currently, we have a running app with a single screen which looks stylish and presents some data to the user.
 
-There is something missing though - The data that we are displaying can't be changed in any way.
+Something is missing though - The data that we are displaying can't be changed in any way.
 
 But even if we change the data there is still a more fundamental issue - all of the data lives on the client.
 
 That means that each client has its own copy of the data and the data is not shared between them,
 if a client creates a new message, only that client will have the new message and not the client the message was sent to.
 
-Also if the client shuts down, all the data will be lost.
+Also, if the client shuts down, all the data will be lost.
 
 So how can we have a place to put the data that is being shared between all clients?
 
 We should find a central machine that all clients will connect to and get the data from.
-If some client wants to create a new message, it will create it on that central machine so that the next time another clients will ask for the available messages,
+If some client wants to create a new message, it will create it on that central machine so that the next time another client will ask for the available messages,
 all those messages will be available on the central machine.
 
 That central machine that stores data is called a database and the machine that communicates between the database and the client is called a server.
